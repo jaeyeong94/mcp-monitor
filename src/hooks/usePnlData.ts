@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { InventoryPnlResponse, RecentPnlResponse, MmAgentsResponse, MarkoutResponse, MultiPairPnlResponse } from '../types/pnl';
-
-const API_BASE = 'http://localhost:3001';
+import { API_BASE } from '../config';
 const REFRESH_INTERVAL = 60000; // 1분마다 갱신
 
 export function usePnlData(exchange: string, pair: string) {

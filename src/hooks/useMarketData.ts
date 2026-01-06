@@ -1,8 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import type { OrderbookSummary, TradesSummary, Anomaly, MarketStats } from '../types/market';
 import { useLatencyMetrics, type LatencyStats } from './useLatencyMetrics';
-
-const API_BASE = 'http://localhost:3001';
+import { API_BASE } from '../config';
 const REFRESH_INTERVAL = 30000; // 30초마다 갱신 (서버 캐시와 동일)
 const LOCAL_STORAGE_KEY = 'mcp-market-data-cache';
 
