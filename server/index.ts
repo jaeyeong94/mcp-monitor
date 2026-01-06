@@ -82,7 +82,7 @@ async function callMCPTool(toolName: string, params: Record<string, unknown>): P
       reject(e);
     });
     
-    req.setTimeout(60000, () => {
+    req.setTimeout(300000, () => {
       req.destroy();
       reject(new Error('Request timeout'));
     });
