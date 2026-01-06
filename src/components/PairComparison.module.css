@@ -1,0 +1,212 @@
+.container {
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  color: #00d9ff;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e6edf3;
+  margin: 0;
+}
+
+.count {
+  font-size: 11px;
+  padding: 4px 8px;
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 10px;
+  color: #00d9ff;
+}
+
+.aggregate {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.aggCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+.aggIcon {
+  color: #8b949e;
+}
+
+.aggContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.aggLabel {
+  font-size: 10px;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.aggValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #e6edf3;
+  font-family: 'SF Mono', monospace;
+}
+
+.pairList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pairCard {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pairCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 217, 255, 0.3);
+}
+
+.pairHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.pairRank {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 217, 255, 0.1);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #00d9ff;
+}
+
+.pairInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pairName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e6edf3;
+}
+
+.pairExchange {
+  font-size: 10px;
+  color: #8b949e;
+  text-transform: uppercase;
+}
+
+.pairPnl {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'SF Mono', monospace;
+}
+
+.pairBar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.pairBarFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.pairBarFill.positive {
+  background: linear-gradient(90deg, #3fb950, #2ea043);
+}
+
+.pairBarFill.negative {
+  background: linear-gradient(90deg, #f85149, #da3633);
+}
+
+.pairMeta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.metaLabel {
+  font-size: 9px;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.metaValue {
+  font-size: 12px;
+  font-weight: 600;
+  color: #e6edf3;
+  font-family: 'SF Mono', monospace;
+}
+
+@media (max-width: 768px) {
+  .aggregate {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pairMeta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .aggregate {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,323 @@
+.container {
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.agentId {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e6edf3;
+  margin: 0;
+  font-family: 'SF Mono', monospace;
+}
+
+.status {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.status.live {
+  background: rgba(63, 185, 80, 0.15);
+  color: #3fb950;
+}
+
+.status.inactive {
+  background: rgba(139, 148, 158, 0.15);
+  color: #8b949e;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+.infoItem svg {
+  color: #00d9ff;
+}
+
+.label {
+  font-size: 10px;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.value {
+  font-size: 13px;
+  color: #e6edf3;
+  font-weight: 500;
+}
+
+.pairsSection {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8b949e;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pairsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pairItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+.pairInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.exchange {
+  font-size: 12px;
+  color: #00d9ff;
+  font-weight: 500;
+  min-width: 60px;
+}
+
+.pair {
+  font-size: 13px;
+  color: #e6edf3;
+  font-family: 'SF Mono', monospace;
+}
+
+.pnlButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 6px;
+  color: #00d9ff;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.pnlButton:hover {
+  background: rgba(0, 217, 255, 0.2);
+}
+
+/* Configuration Section */
+.configsSection {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 16px;
+}
+
+.configsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pairConfigContainer {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pairConfigHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  color: #e6edf3;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.pairConfigHeader:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pairConfigHeader svg {
+  color: #8b949e;
+  flex-shrink: 0;
+}
+
+.pairConfigExchange {
+  font-size: 11px;
+  color: #00d9ff;
+  font-weight: 500;
+  text-transform: uppercase;
+  min-width: 60px;
+}
+
+.pairConfigPair {
+  font-size: 12px;
+  color: #e6edf3;
+  font-family: 'SF Mono', monospace;
+}
+
+.pairConfigBody {
+  padding: 8px 12px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Config Section (collapsible) */
+.configSection {
+  margin-bottom: 8px;
+}
+
+.configSection:last-child {
+  margin-bottom: 0;
+}
+
+.configToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  background: rgba(0, 217, 255, 0.05);
+  border: 1px solid rgba(0, 217, 255, 0.1);
+  border-radius: 6px;
+  color: #00d9ff;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+}
+
+.configToggle:hover {
+  background: rgba(0, 217, 255, 0.1);
+}
+
+.configToggle svg {
+  flex-shrink: 0;
+}
+
+.configContent {
+  padding: 10px;
+  margin-top: 6px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+/* Config Row (key-value pair) */
+.configRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.configRow:last-child {
+  border-bottom: none;
+}
+
+.configLabel {
+  font-size: 11px;
+  color: #8b949e;
+}
+
+.configValue {
+  font-size: 12px;
+  color: #e6edf3;
+  font-family: 'SF Mono', monospace;
+  font-weight: 500;
+}
+
+/* Volatility Levels */
+.volatilityLevel {
+  padding: 8px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.volatilityLevel:last-child {
+  margin-bottom: 0;
+}
+
+.levelBadge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  color: #f0883e;
+  background: rgba(240, 136, 62, 0.15);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.levelDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.levelsContainer {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.levelsTitle {
+  font-size: 10px;
+  font-weight: 600;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  display: block;
+}

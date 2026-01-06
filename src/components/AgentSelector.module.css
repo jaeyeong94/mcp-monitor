@@ -1,0 +1,81 @@
+.container {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(22, 27, 34, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #e6edf3;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.trigger:hover {
+  background: rgba(48, 54, 61, 0.9);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 260px;
+  background: rgba(22, 27, 34, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 6px;
+  z-index: 100;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #e6edf3;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.option.selected {
+  background: rgba(0, 217, 255, 0.1);
+}
+
+.exchange {
+  color: #00d9ff;
+  font-weight: 500;
+  min-width: 70px;
+}
+
+.pair {
+  color: #8b949e;
+  font-family: 'SF Mono', monospace;
+  font-size: 12px;
+}
+
+.option.selected .pair {
+  color: #e6edf3;
+}

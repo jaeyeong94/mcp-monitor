@@ -1,0 +1,210 @@
+.container {
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Regime Card */
+.regimeCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.regimeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.regimeInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.regimeLabel {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.regimeDescription {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+.confidence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.confidenceBadge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.confidenceBadge.high {
+  background: rgba(63, 185, 80, 0.2);
+  color: #3fb950;
+}
+
+.confidenceBadge.medium {
+  background: rgba(240, 136, 62, 0.2);
+  color: #f0883e;
+}
+
+.confidenceBadge.low {
+  background: rgba(139, 148, 158, 0.2);
+  color: #8b949e;
+}
+
+.confidenceLabel {
+  font-size: 9px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Metrics Grid */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+}
+
+.metricLabel {
+  font-size: 9px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metricValue {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.metricNumber {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Indicators Section */
+.indicatorsSection {
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.indicatorRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.indicatorLabel {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.rsiBar {
+  position: relative;
+  height: 8px;
+  background: linear-gradient(
+    to right,
+    rgba(63, 185, 80, 0.3) 0%,
+    rgba(63, 185, 80, 0.3) 30%,
+    rgba(139, 148, 158, 0.2) 30%,
+    rgba(139, 148, 158, 0.2) 70%,
+    rgba(248, 81, 73, 0.3) 70%,
+    rgba(248, 81, 73, 0.3) 100%
+  );
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.rsiMarker {
+  position: absolute;
+  top: -2px;
+  width: 6px;
+  height: 12px;
+  border-radius: 3px;
+  transform: translateX(-50%);
+  box-shadow: 0 0 6px rgba(0, 217, 255, 0.5);
+}
+
+.rsiZones {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 calc(30% - 8px) 0 calc(30% - 8px);
+  margin-top: 4px;
+}
+
+.oversold,
+.overbought {
+  font-size: 9px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.smaInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.smaLabel {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.smaValue {
+  font-size: 11px;
+  font-weight: 600;
+}

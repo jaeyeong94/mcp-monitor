@@ -1,0 +1,195 @@
+.container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.icon {
+  color: var(--accent-cyan);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.trendBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.trendBadge.bullish {
+  background: rgba(57, 211, 83, 0.15);
+  color: var(--accent-green);
+}
+
+.trendBadge.bearish {
+  background: rgba(248, 81, 73, 0.15);
+  color: var(--accent-red);
+}
+
+.trendBadge.neutral {
+  background: rgba(139, 148, 158, 0.15);
+  color: var(--text-secondary);
+}
+
+.barContainer {
+  margin-bottom: var(--space-md);
+}
+
+.bar {
+  display: flex;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.buyBar {
+  background: linear-gradient(90deg, #39d353 0%, #2ea043 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  transition: width 0.3s ease;
+}
+
+.sellBar {
+  background: linear-gradient(90deg, #da3633 0%, #f85149 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  transition: width 0.3s ease;
+}
+
+.barLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.volumeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.volumeItem {
+  text-align: center;
+  padding: var(--space-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+}
+
+.volumeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.volumeValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.buyColor {
+  color: var(--accent-green);
+}
+
+.sellColor {
+  color: var(--accent-red);
+}
+
+.streak {
+  margin-bottom: var(--space-md);
+}
+
+.streakItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 11px;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.buyStreak {
+  background: rgba(57, 211, 83, 0.1);
+  color: var(--accent-green);
+}
+
+.sellStreak {
+  background: rgba(248, 81, 73, 0.1);
+  color: var(--accent-red);
+}
+
+.strengthContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border-primary);
+}
+
+.strengthLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.strengthBar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.strengthFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.strengthFill.bullish {
+  background: var(--accent-green);
+}
+
+.strengthFill.bearish {
+  background: var(--accent-red);
+}
+
+.strengthFill.neutral {
+  background: var(--text-secondary);
+}
+
+.strengthValue {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 32px;
+  text-align: right;
+}

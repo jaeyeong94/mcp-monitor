@@ -1,0 +1,199 @@
+.container {
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.healthy {
+  color: #3fb950;
+}
+
+.warning {
+  color: #d29922;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e6edf3;
+  margin: 0;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge.good {
+  background: rgba(63, 185, 80, 0.15);
+  color: #3fb950;
+}
+
+.badge.bad {
+  background: rgba(210, 153, 34, 0.15);
+  color: #d29922;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.summaryCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.summaryCard.positive {
+  border-color: rgba(63, 185, 80, 0.3);
+  background: rgba(63, 185, 80, 0.05);
+}
+
+.summaryCard.negative {
+  border-color: rgba(248, 81, 73, 0.3);
+  background: rgba(248, 81, 73, 0.05);
+}
+
+.summaryLabel {
+  display: block;
+  font-size: 10px;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.summaryValue {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e6edf3;
+  font-family: 'SF Mono', monospace;
+}
+
+.positive .summaryValue {
+  color: #3fb950;
+}
+
+.negative .summaryValue {
+  color: #f85149;
+}
+
+.intervals {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 16px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8b949e;
+  margin: 0 0 12px;
+}
+
+.intervalGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.intervalCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.intervalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.intervalLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #00d9ff;
+}
+
+.intervalValue {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'SF Mono', monospace;
+  margin-bottom: 8px;
+}
+
+.intervalBar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.intervalFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.intervalMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #8b949e;
+}
+
+.interpretation {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  font-size: 11px;
+  color: #8b949e;
+  line-height: 1.6;
+}
+
+.interpretation p {
+  margin: 0 0 6px;
+}
+
+.interpretation p:last-child {
+  margin-bottom: 0;
+}
+
+.interpretation strong {
+  color: #e6edf3;
+}
+
+@media (max-width: 600px) {
+  .intervalGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

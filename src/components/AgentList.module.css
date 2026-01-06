@@ -1,0 +1,104 @@
+.container {
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #00d9ff;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e6edf3;
+  margin: 0;
+  flex: 1;
+}
+
+.count {
+  font-size: 11px;
+  color: #3fb950;
+  background: rgba(63, 185, 80, 0.1);
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.group:last-child {
+  border-bottom: none;
+}
+
+.groupHeader {
+  padding: 10px 16px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8b949e;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.agentItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+  text-align: left;
+}
+
+.agentItem:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.agentItem.selected {
+  background: rgba(0, 217, 255, 0.08);
+  border-left: 2px solid #00d9ff;
+}
+
+.agentInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statusDot {
+  flex-shrink: 0;
+}
+
+.agentId {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e6edf3;
+  font-family: 'SF Mono', monospace;
+}
+
+.agentMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8b949e;
+}
+
+.pairCount {
+  font-size: 11px;
+}

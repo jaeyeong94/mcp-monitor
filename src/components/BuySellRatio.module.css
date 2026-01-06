@@ -1,0 +1,81 @@
+.container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.title::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 16px;
+  background: linear-gradient(180deg, var(--accent-green) 0%, var(--accent-red) 100%);
+  border-radius: 2px;
+}
+
+.bar {
+  display: flex;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+}
+
+.buyBar {
+  background: linear-gradient(90deg, #39d353 0%, #2ea043 100%);
+  transition: width 0.5s ease;
+}
+
+.sellBar {
+  background: linear-gradient(90deg, #da3633 0%, #f85149 100%);
+  transition: width 0.5s ease;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buyLabel,
+.sellLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.labelDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.labelText {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.labelValue {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.labelVolume {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+

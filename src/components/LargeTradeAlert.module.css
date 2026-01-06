@@ -1,0 +1,130 @@
+.container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.icon {
+  color: var(--accent-yellow);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.badge {
+  background: var(--accent-yellow);
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.empty {
+  color: var(--text-muted);
+  font-size: 12px;
+  text-align: center;
+  padding: var(--space-lg) 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid transparent;
+}
+
+.item.buy {
+  border-left-color: var(--accent-green);
+}
+
+.item.buy .itemIcon {
+  color: var(--accent-green);
+}
+
+.item.sell {
+  border-left-color: var(--accent-red);
+}
+
+.item.sell .itemIcon {
+  color: var(--accent-red);
+}
+
+.itemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.itemContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemMain {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.volume {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.multiplier {
+  font-size: 11px;
+  color: var(--accent-yellow);
+  font-weight: 500;
+}
+
+.itemMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: 2px;
+}
+
+.time {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.price {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.footer {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border-primary);
+  font-size: 11px;
+  color: var(--text-muted);
+}
