@@ -2,7 +2,7 @@ import http from 'http';
 import https from 'https';
 import { URL } from 'url';
 
-const PORT = 3001;
+const PORT = 3002;
 
 // CORS headers
 const corsHeaders = {

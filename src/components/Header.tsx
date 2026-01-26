@@ -1,10 +1,10 @@
-import { Activity, RefreshCw, Settings, BarChart3, Users, GitCompare, TrendingUp } from 'lucide-react';
+import { Activity, RefreshCw, Settings, BarChart3, Users, GitCompare, TrendingUp, Gauge } from 'lucide-react';
 import { format } from 'date-fns';
 import { LatencyMonitor } from './LatencyMonitor';
 import type { LatencyStats } from '../hooks/useLatencyMetrics';
 import styles from './Header.module.css';
 
-type ViewType = 'market' | 'pnl' | 'agents' | 'comparison';
+type ViewType = 'market' | 'pnl' | 'agents' | 'comparison' | 'analytics';
 
 interface HeaderProps {
   exchange: string;
@@ -47,6 +47,7 @@ export function Header({
 }: HeaderProps) {
   const navItems = [
     { key: 'market' as ViewType, label: 'Market', icon: BarChart3 },
+    { key: 'analytics' as ViewType, label: 'Analytics', icon: Gauge },
     { key: 'agents' as ViewType, label: 'Agents', icon: Users },
     { key: 'comparison' as ViewType, label: 'Compare', icon: GitCompare },
     { key: 'pnl' as ViewType, label: 'PnL', icon: TrendingUp },
@@ -75,7 +76,7 @@ export function Header({
           </nav>
         )}
 
-        {currentView === 'market' && (
+        {(currentView === 'market' || currentView === 'analytics') && (
           <div className={styles.selectors}>
             <select
               value={exchange}

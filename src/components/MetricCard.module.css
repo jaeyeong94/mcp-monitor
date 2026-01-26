@@ -1,0 +1,141 @@
+.card {
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(48, 54, 61, 0.8);
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(48, 54, 61, 1);
+  transform: translateY(-2px);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.statusNormal {
+  border-left: 3px solid #238636;
+}
+
+.statusWarning {
+  border-left: 3px solid #d29922;
+  background: rgba(210, 153, 34, 0.05);
+}
+
+.statusDanger {
+  border-left: 3px solid #f85149;
+  background: rgba(248, 81, 73, 0.05);
+}
+
+.header {
+  margin-bottom: 12px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.shortName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #00d9ff;
+}
+
+.name {
+  font-size: 11px;
+  color: #8b949e;
+}
+
+.iconNormal {
+  color: #238636;
+}
+
+.iconWarning {
+  color: #d29922;
+}
+
+.iconDanger {
+  color: #f85149;
+}
+
+.valueSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #e6edf3;
+  font-feature-settings: 'tnum';
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+}
+
+.trendGood {
+  color: #238636;
+}
+
+.trendBad {
+  color: #f85149;
+}
+
+.trendNeutral {
+  color: #8b949e;
+}
+
+.description {
+  font-size: 11px;
+  color: #8b949e;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.thresholdBar {
+  margin-top: 8px;
+}
+
+.thresholdTrack {
+  position: relative;
+  height: 4px;
+  background: rgba(48, 54, 61, 0.8);
+  border-radius: 2px;
+  overflow: visible;
+}
+
+.thresholdFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #238636 0%, #d29922 60%, #f85149 100%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.warningMark,
+.dangerMark {
+  position: absolute;
+  top: -2px;
+  width: 2px;
+  height: 8px;
+  border-radius: 1px;
+}
+
+.warningMark {
+  background: #d29922;
+}
+
+.dangerMark {
+  background: #f85149;
+}

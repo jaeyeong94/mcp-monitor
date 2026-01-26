@@ -3,6 +3,7 @@ import { DollarSign, Activity, BarChart3, Zap } from 'lucide-react';
 import { PnlDashboard } from './pages/PnlDashboard';
 import { AgentDashboard } from './pages/AgentDashboard';
 import { PairComparisonDashboard } from './pages/PairComparisonDashboard';
+import { TradingAnalyticsDashboard } from './pages/TradingAnalyticsDashboard';
 import { Header } from './components/Header';
 import { StatsCard } from './components/StatsCard';
 import { PriceChart } from './components/PriceChart';
@@ -45,7 +46,7 @@ function formatPrice(price: number): string {
 }
 
 export default function App() {
-  const [view, setView] = useState<'market' | 'pnl' | 'agents' | 'comparison'>('market');
+  const [view, setView] = useState<'market' | 'pnl' | 'agents' | 'comparison' | 'analytics'>('market');
   const [exchange, setExchange] = useState('binance');
   const [symbol, setSymbol] = useState('BTCUSDT');
   const [interval, setInterval] = useState('1m');
@@ -129,6 +130,21 @@ export default function App() {
             setPnlTarget({ exchange: ex, pair });
             setView('pnl');
           }}
+          hideHeader
+        />
+        <div className={styles.bgGlow} />
+      </div>
+    );
+  }
+
+  // Trading Analytics view
+  if (view === 'analytics') {
+    return (
+      <div className={styles.app}>
+        {renderHeader()}
+        <TradingAnalyticsDashboard
+          trades={tradesSummary}
+          orderbook={orderbookSummary}
           hideHeader
         />
         <div className={styles.bgGlow} />
